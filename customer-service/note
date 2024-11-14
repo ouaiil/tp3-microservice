@@ -1,0 +1,6 @@
+-projection il permet de consulter des attributes specifique pou fiare ca on cree un interface dans anterface on mai @Projection(types = nom_class.classe)
+-pour faire la configuration dynamique nousauron besoin de cree dicovery service cree new module
+-pour configuer discover service ajoute une annotaion dans le main service @EnableEurekaServer
+-chaque un micro service demmare il va seconnecter vers discovery pour enregistrer son nom est son adress
+-  @Transient facon de dire a jpa cette attribute elle est dans la classe mais il n'est pas dans la base de donner cad tu ignore
+-Open feign c'est framework qui permet de cree un client rest d'un manier declaratif pour communique avec les microservice
