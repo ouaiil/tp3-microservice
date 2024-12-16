@@ -22,7 +22,6 @@ public class Bill {
     private Date billDate;
     private Long customerID;
     @OneToMany(mappedBy = "bill")
-
     private List<ProductItem> productItems;
     @Transient
     private Customer customer;

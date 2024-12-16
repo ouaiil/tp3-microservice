@@ -8,6 +8,20 @@ spring:
   cloud:
     discovery:
       enabled: true
+    gateway:
+      globalcors:
+        cors-configurations:
+          '[/**]' :
+            allowedOrigins: "http://localhost:4200"
+            allowedHeaders: "*"
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - DELETE
+
+
+
 #    gateway:
 #      mvc:
 #        routes:

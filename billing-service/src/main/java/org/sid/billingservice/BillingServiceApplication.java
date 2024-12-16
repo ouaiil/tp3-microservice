@@ -51,6 +51,27 @@ public class BillingServiceApplication {
                 productItemRepository.save(productItem);
             });
 
+            // Création de la deuxième facture
+            Long customerId2 = 2L;
+            Customer customer2 = customerRestClient.findCustomerById(customerId);
+            if (customer2 == null) throw new RuntimeException("Customer not found");
+
+            Bill bill2 = new Bill();
+            bill2.setBillDate(new Date());
+            bill2.setCustomerID(customerId2);
+            Bill savedBill2 = billRepository.save(bill2);
+
+            products.forEach(product -> {
+                ProductItem productItem = new ProductItem();
+                productItem.setBill(savedBill2);
+                productItem.setProductId(product.getId());
+                productItem.setQuantity(1 + new Random().nextInt(10));
+                productItem.setPrice(product.getPrice());
+                productItem.setDiscount(Math.random());
+                productItemRepository.save(productItem);
+            });
+
+
 
         };
     }
