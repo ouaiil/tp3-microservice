@@ -13,6 +13,12 @@
 ![image](https://github.com/user-attachments/assets/d07523e6-1f09-4468-bf97-034305f12700)
 ![image](https://github.com/user-attachments/assets/99cf6e7e-cb62-452b-b4a7-779f652dcbe4)
 
+# Étapes
+### Créer Customer-Service & Inventory-Service : Spring Boot avec JPA.
+### Configurer la Gateway : Routage statique et dynamique via Eureka.
+### Ajouter Billing-Service : Interaction avec Open Feign.
+### Configurer le Configuration Service : Centraliser les configurations dans Git.
+### Développer le client Angular : Interface utilisateur pour afficher clients, produits et factures.
 
 
 
